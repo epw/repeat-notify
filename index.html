@@ -5,10 +5,25 @@
 <script type="text/javascript" src="startnotify.js"></script>
 <style type="text/css">
 h1 { text-align: center }
+li { padding-bottom: 2em }
 </style>
 </head>
 <body>
 <h1>Notifier</h1>
+
+<h2>Default times:</h2>
+<ul>
+<li><a href="?t=5">5 minutes</a></li>
+<li><a href="?t=15">15 minutes</a></li>
+<li><a href="?t=20">20 minutes</a></li>
+<li><a href="?t=30">30 minutes</a></li>
+</ul>
+
+<h3>Specific number of minutes:</h3>
+<form method="GET" action="">
+<input type="text" name="t" size="5" />
+<input type="submit" value="Start" />
+</form>
 
 </body>
 </html>
