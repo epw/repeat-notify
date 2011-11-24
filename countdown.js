@@ -1,7 +1,7 @@
 var seconds;
 
-function seconds_to_time (num_seconds) {
-    var minutes = num_seconds / 60 + "";
+function seconds_to_time () {
+    var minutes = seconds / 60 + "";
     if (minutes < 10) {
 	minutes = "0" + minutes;
     }
@@ -13,7 +13,8 @@ function seconds_to_time (num_seconds) {
 }
 
 function countdown () {
-    document.getElementById ("countdown").innerHTML = seconds_to_time (seconds);
+    document.getElementById ("countdown").innerHTML = seconds_to_time ();
+    seconds--;
 }    
 
 function init () {
