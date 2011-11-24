@@ -25,4 +25,4 @@ function init () {
     addInterval ("countdown", 1);
 }
 
-window.addEventHandler ("load", init);
+window.addEventListener ("load", init);
