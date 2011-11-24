@@ -1,4 +1,5 @@
 var seconds;
+var time_list;
 
 var loop;
 
@@ -20,18 +21,27 @@ function countdown () {
     if (seconds < 0) {
 	document.getElementById ('notify').play ()
 	clearInterval (loop);
-	init ();
+	restart ();
     }
 }    
 
-function init () {
-    var minutes = window.location.getParameter ("t");
-    if (minutes == 0) {
-	minutes = 15;
+function restart () {
+    var minutes = time_list.pop();
+
+    if (typeof (minutes) == "undefined") {
+	return;
     }
+
     seconds = minutes * 60;
 
     loop = setInterval ("countdown ()", 1000);
+}
+
+function init () {
+    time_list = window.location.getParameter ("t").split (",");
+    time_list.reverse ();
+
+    restart ();
 }
 
 window.addEventListener ("load", init);
