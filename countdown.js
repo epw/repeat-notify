@@ -7,7 +7,7 @@ function seconds_to_time (num_seconds) {
     }
     var these_seconds = num_seconds % 60 + "";
     if (these_seconds < 10) {
-	these_seconds = "0" + these_secods;
+	these_seconds = "0" + these_seconds;
     }
     return minutes + ":" + these_seconds;
 }
