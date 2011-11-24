@@ -38,6 +38,7 @@ function restart () {
 
     loop = setInterval ("countdown ()", 1000);
     old_minutes = minutes;
+    console.log (old_minutes);
 }
 
 function init () {
