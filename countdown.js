@@ -18,6 +18,9 @@ function countdown () {
 
 function init () {
     var minutes = window.location.getParameter ("t");
+    if (minutes == 0) {
+	minutes = 15;
+    }
     seconds = minutes * 60;
 
     setInterval ("document.getElementById ('notify').play ()",
