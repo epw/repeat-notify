@@ -30,7 +30,7 @@ function init () {
     if (minutes == 0) {
 	minutes = 15;
     }
-    seconds = minutes * 60 + 1;
+    seconds = minutes * 60 - 1;
 
     count_loop = setInterval ("countdown ()", 1000);
     sound_loop = setInterval ("document.getElementById ('notify').play ()",
