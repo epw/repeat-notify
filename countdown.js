@@ -5,7 +5,7 @@ function seconds_to_time () {
     if (minutes < 10) {
 	minutes = "0" + minutes;
     }
-    var these_seconds = num_seconds % 60 + "";
+    var these_seconds = seconds % 60 + "";
     if (these_seconds < 10) {
 	these_seconds = "0" + these_seconds;
     }
