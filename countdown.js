@@ -28,7 +28,6 @@ function countdown () {
 }    
 
 function restart () {
-    old_minutes = minutes;
     var minutes = time_list.pop();
 
     if (typeof (minutes) == "undefined") {
@@ -38,6 +37,7 @@ function restart () {
     }
 
     loop = setInterval ("countdown ()", 1000);
+    old_minutes = minutes;
 }
 
 function init () {
