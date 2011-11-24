@@ -26,7 +26,7 @@ function init () {
 
     setInterval ("document.getElementById ('notify').play ()",
 		 1000 * seconds);
-    setInterval ("countdown ()", 1);
+    setInterval ("countdown ()", 1000);
 }
 
 window.addEventListener ("load", init);
