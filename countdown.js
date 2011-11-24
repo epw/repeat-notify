@@ -34,11 +34,10 @@ function restart () {
 	seconds = old_minutes * 60;
     } else {
 	seconds = minutes * 60;
+	old_minutes = minutes;
     }
 
     loop = setInterval ("countdown ()", 1000);
-    old_minutes = minutes;
-    console.log (old_minutes);
 }
 
 function init () {
