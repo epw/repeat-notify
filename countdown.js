@@ -1,6 +1,6 @@
 var seconds;
 
-var sound_loop;
+var loop;
 
 function seconds_to_time () {
     var minutes = Math.floor (seconds / 60) + "";
@@ -19,7 +19,7 @@ function countdown () {
     seconds--;
     if (seconds <= 0) {
 	document.getElementById ('notify').play ()
-	clearInterval (sound_loop);
+	clearInterval (loop);
 	init ();
     }
 }    
@@ -31,7 +31,7 @@ function init () {
     }
     seconds = minutes * 60;
 
-    count_loop = setInterval ("countdown ()", 1000);
+    loop = setInterval ("countdown ()", 1000);
 }
 
 window.addEventListener ("load", init);
