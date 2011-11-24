@@ -51,6 +51,11 @@ function init () {
     time_list = time_string.split (",");
     time_list.reverse ();
 
+    sound_url = window.location.getParameter ("snd");
+    if (sound_url) {
+	document.getElementById ("notify").src = unescape (sound_url);
+    }
+
     restart ();
 }
 
