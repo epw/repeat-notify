@@ -3,6 +3,8 @@ var time_list;
 
 var loop;
 
+var old_minutes;
+
 function seconds_to_time () {
     var minutes = Math.floor (seconds / 60) + "";
     if (minutes < 10) {
@@ -26,13 +28,14 @@ function countdown () {
 }    
 
 function restart () {
+    old_minutes = minutes;
     var minutes = time_list.pop();
 
     if (typeof (minutes) == "undefined") {
-	return;
+	seconds = old_minutes * 60;
+    } else {
+	seconds = minutes * 60;
     }
-
-    seconds = minutes * 60;
 
     loop = setInterval ("countdown ()", 1000);
 }
