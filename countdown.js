@@ -28,12 +28,17 @@ function countdown () {
 }    
 
 function restart () {
-    var minutes = time_list.pop();
+    var minutes = 0;
+    
+    while (minutes == 0) {
+	minutes = time_list.pop();
 
-    if (typeof (minutes) == "undefined") {
-	seconds = old_minutes * 60;
-    } else {
-	seconds = minutes * 60;
+	if (typeof (minutes) == "undefined") {
+	    seconds = old_minutes * 60;
+	    minutes = old_minutes;
+	} else {
+	    seconds = minutes * 60;
+	}
 	old_minutes = minutes;
     }
 
