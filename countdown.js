@@ -1,7 +1,7 @@
 var seconds;
 
 function seconds_to_time () {
-    var minutes = seconds / 60 + "";
+    var minutes = Math.floor (seconds / 60) + "";
     if (minutes < 10) {
 	minutes = "0" + minutes;
     }
