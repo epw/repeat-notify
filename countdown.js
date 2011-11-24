@@ -41,7 +41,7 @@ function restart () {
 }
 
 function init () {
-    time_list = window.location.getParameter ("t").split (",");
+    time_list = window.location.getParameter ("t").split (/\D+/g);
     time_list.reverse ();
 
     restart ();
