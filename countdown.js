@@ -17,7 +17,7 @@ function seconds_to_time () {
 function countdown () {
     document.getElementById ("countdown").innerHTML = seconds_to_time ();
     seconds--;
-    if (seconds <= 0) {
+    if (seconds < 0) {
 	document.getElementById ('notify').play ()
 	clearInterval (loop);
 	init ();
