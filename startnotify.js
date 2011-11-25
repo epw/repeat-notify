@@ -1,5 +1,5 @@
 function sndchange (val) {
-    document.getELementById ("snd").value = val;
+    document.getElementById ("snd").value = val;
 }
 
 function init () {
