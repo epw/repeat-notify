@@ -2,7 +2,7 @@ var e;
 
 function sndchange (ev) {
     e = ev;
-    document.getElementById ("snd").value = ev.val;
+    document.getElementById ("snd").value = ev.target.value;
 }
 
 function init () {
