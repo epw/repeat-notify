@@ -10,7 +10,7 @@ function init () {
 	window.open (window.location.origin + window.location.pathname
 		     + "countdown.html" + window.location.search,
 		     "countdown",
-		     "width=150, height=100");
+		     "width=200, height=125");
     }
 
     document.getElementById ("sndlist").addEventListener ("change", sndchange);
