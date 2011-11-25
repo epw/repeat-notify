@@ -1,5 +1,8 @@
+var e;
+
 function sndchange (ev) {
-    document.getElementById ("snd").value = ev.value;
+    e = ev;
+    document.getElementById ("snd").value = ev.val;
 }
 
 function init () {
