@@ -7,10 +7,15 @@
 h1 { text-align: center }
 li { padding-bottom: 2em }
 h6 { text-align: right }
+.alert { color: #dd0000 }
 </style>
 </head>
 <body>
 <h1>Notifier</h1>
+
+<h3 class="alert">This web page requires that pop-ups not be blocked!</h3>
+<div class="alert">(Not for anything evil, the timers are just put in
+  their own windows.)</div>
 
 <h2>Default times:</h2>
 <ul>
@@ -19,9 +24,6 @@ h6 { text-align: right }
 <li><a href="?t=20">20 minutes</a></li>
 <li><a href="?t=30">30 minutes</a></li>
 </ul>
-
-<h3>Specific numbers of minutes (separated by commas):</h3>
-<form method="GET" action="">
 
 <p>
 <div>
@@ -39,6 +41,10 @@ URL of sound file: (a drip will be used by default)
 </select>
 </div>
 </p>
+
+<h3>Specific numbers of minutes (separated by commas):</h3>
+<p>Final value will be repeated.</p>
+<form method="GET" action="">
 
 <input type="text" name="t" size="50" />
 <input type="submit" value="Start" />

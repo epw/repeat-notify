@@ -1,0 +1,32 @@
+This project defines a Web page with an interface to create repeating
+countdown timers.
+
+INSTALLATION
+
+After the project is downloaded, navigating to index.html will allow
+the page to be used. To install to a remote server, the variables in
+the Makefile should be filled in, and
+	 $ make publish
+should be executed.
+
+New sounds can be added by putting them in the project directory, and
+adding them to the <select> tag in index.html.
+
+USAGE
+
+index.html renders a very plain Web page. Once popups are enabled,
+clicking on one of the "Default times" links will create a window with
+a countdown timer. The window will have a blank text field underneath
+the numbers, to allow the timer to be labeled.
+
+When a timer reaches 0, it will play the sound most recently chosen on
+the main page before it was created, and then restart.
+
+The "URL of sound file" field can use one of the drop-down box's
+options, or can include a complete URL beginning with http://
+
+Finally, if anything is put in the "Specific numbers of minutes"
+field, then it is assumed to be a comma-separated list of
+minutes. The timer created will count down for the first number,
+followed by the second, and so on until it repeats on the final number
+given.

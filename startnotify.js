@@ -7,7 +7,9 @@ function sndchange (ev) {
 
 function init () {
     if (window.location.getParameter ("t") != "") {
-	window.open (window.location.origin + window.location.pathname
+	var pathname = window.location.pathname;
+	pathname = pathname.replace ("index.html", "");
+	window.open (window.location.origin + pathname
 		     + "countdown.html" + window.location.search,
 		     "countdown",
 		     "width=200, height=125");
